@@ -1,0 +1,34 @@
+[INCIDENT 1]
+Time: 14:32
+Service: storage-api
+Symptoms: high memory usage, slow responses, service restart
+Cause: memory limit exceeded
+Resolution: reduced batch size and increased memory limit
+
+[INCIDENT 2]
+Time: 18:10
+Service: auth-service
+Symptoms: many 500 errors, users cannot log in
+Cause: expired database connection pool
+Resolution: restarted service and increased pool timeout
+
+[INCIDENT 3]
+Time: 09:45
+Service: payment-service
+Symptoms: slow payments, timeout errors
+Cause: external payment provider was unavailable
+Resolution: added retry logic and fallback status handling
+
+[INCIDENT 4]
+Time: 22:15
+Service: file-storage
+Symptoms: upload errors, corrupted files
+Cause: incorrect file chunk ordering
+Resolution: fixed chunk sorting before file merge
+
+[INCIDENT 5]
+Time: 03:20
+Service: backup-worker
+Symptoms: backup job failed, high disk usage
+Cause: not enough free space on disk
+Resolution: cleaned old temporary files and added disk usage monitoring
